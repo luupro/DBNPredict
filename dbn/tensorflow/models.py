@@ -444,12 +444,18 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
                 feed_dict = {self.visible_units_placeholder: data, self.y_: labels}
                 feed_dict.update({placeholder: 1.0 for placeholder in self.keep_prob_placeholders})
                 train_error = sess.run(self.cost_function, feed_dict=feed_dict)
-                feed_dict_test = {self.visible_units_placeholder: self.x_test, self.y_: self.y_test}
-                feed_dict_test.update({placeholder: 1.0 for placeholder in self.keep_prob_placeholders})
-                test_error = sess.run(self.cost_function, feed_dict=feed_dict_test)
+
+                #  Luu remove test
+                #feed_dict_test = {self.visible_units_placeholder: self.x_test, self.y_: self.y_test}
+                #feed_dict_test.update({placeholder: 1.0 for placeholder in self.keep_prob_placeholders})
+                #test_error = sess.run(self.cost_function, feed_dict=feed_dict_test)
+
                 self.train_loss.append(train_error)
-                self.test_loss.append(test_error)
-                print(">> Epoch %d finished \tMLP MSE training loss %f\t MSE testing loss %f" % (iteration, train_error, test_error))
+
+                #  Luu remove test
+                #self.test_loss.append(test_error)
+                #print(">> Epoch %d finished \tMLP MSE training loss %f\t MSE testing loss %f" % (iteration, train_error, test_error))
+                print(">> Epoch %d finished \tMLP MSE training loss %f\t" % (iteration, train_error))
 
     def transform(self, X):
         feed_dict = {self.visible_units_placeholder: X}
@@ -480,9 +486,9 @@ class SupervisedDBNRegression(TensorFlowAbstractSupervisedDBN, RegressorMixin):
     """
     train_loss: List[Any]
 
-    def set_data_test(self, X_test, y_test):
-        self.x_test = X_test
-        self.y_test = y_test
+    #def set_data_test(self, X_test, y_test):
+        #self.x_test = X_test
+        #self.y_test = y_test
 
     def _build_model(self, weights=None):
         super(SupervisedDBNRegression, self)._build_model(weights)

@@ -1,10 +1,8 @@
-print(element.hidden_layers_structure)
-print(element.learning_rate_rbm)
-print(element.learning_rate)
-print(element.n_epochs_rbm)
-print(element.n_iter_backprop)
-print(element.batch_size)
-print(element.activation_function)
-print(element.n_hidden_layers_mlp)
-print(element.n_hidden_layers_mlp)
-print(element.cost_function_name)
+process:
+1. SupervisedDBNRegression.fit(data_train, label_train)
+	2. AbstractSupervisedDBN.pre_train(X)
+		3. AbstractSupervisedDBN.unsupervised_dbn.fit(X) #Initialize rbm layers
+			4.
+	5. AbstractSupervisedDBN._fine_tuning(X, y)
+		6. TensorFlowAbstractSupervisedDBN._stochastic_gradient_descent(data, labels)
+

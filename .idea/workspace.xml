@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/dbn/models.py" description="self.n_visible_units = X.shape[1]" line="55" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8724dc9f-4186-4e56-b506-3fa51371cb01" name="Default" comment="" />
+    <list default="true" id="8724dc9f-4186-4e56-b506-3fa51371cb01" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/RandomRegression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbn/tensorflow/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbn/tensorflow/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/HSElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/HSElement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/HSMemory.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/HSMemory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/ParRandom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/lorenz-hs.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/lorenz-hs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/lorenz.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/lorenz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/note.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,9 +24,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/deep_belief_network$ipc_Spain.coverage" NAME="ipc_Spain Coverage Results" MODIFIED="1547906935917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/deep_belief_network$lorenz.coverage" NAME="lorenz Coverage Results" MODIFIED="1555839232585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/deep_belief_network$lorenz.coverage" NAME="lorenz Coverage Results" MODIFIED="1563610838178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/deep_belief_network$Rossler.coverage" NAME="Rossler Coverage Results" MODIFIED="1547904949728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/deep_belief_network$lorenz_hs.coverage" NAME="lorenz-hs Coverage Results" MODIFIED="1555838379472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/deep_belief_network$lorenz_hs.coverage" NAME="lorenz-hs Coverage Results" MODIFIED="1563598644057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -36,24 +50,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/HSMemory.py">
+        <entry file="file://$PROJECT_DIR$/examples/lorenz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="179">
+              <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/HSElement.py">
+        <entry file="file://$PROJECT_DIR$/examples/RandomRegression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="39" column="89" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="89" />
+            <state relative-caret-position="170">
+              <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,10 +76,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/lorenz-hs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="182">
+              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbn/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="343" column="23" lean-forward="true" selection-start-line="343" selection-start-column="23" selection-end-line="343" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbn/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+            <state relative-caret-position="230">
+              <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,10 +110,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/note.txt">
+        <entry file="file://$PROJECT_DIR$/dbn/tensorflow/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+            <state relative-caret-position="82">
+              <caret line="482" column="6" selection-start-line="482" selection-start-column="6" selection-end-line="482" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,15 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_system_import</find>
-      <find>pandas</find>
-      <find>do_import</find>
-      <find>cuDNN</find>
-      <find>Could not find cuDNN</find>
-      <find>erro</find>
-      <find>err</find>
-      <find>create_lorenz_data</find>
-      <find>'t'</find>
       <find>.as_matrix</find>
       <find>array</find>
       <find>Xa</find>
@@ -119,11 +139,9 @@
       <find>thou</find>
       <find>cost_function_name</find>
       <find>fit</find>
-      <find>train_loss</find>
       <find>n_epochs_rbm</find>
       <find>traning_lost</find>
       <find>training_lost</find>
-      <find>SupervisedDBNRegression</find>
       <find>best_flg</find>
       <find>_hmMemory</find>
       <find>max_train_lost</find>
@@ -133,6 +151,17 @@
       <find>element_after_train</find>
       <find>__hmMemory</find>
       <find>i==</find>
+      <find>tmp_return_element</find>
+      <find>train_with_element_option</find>
+      <find>Y_pred_train</find>
+      <find>mean_absolute_percentage_error</find>
+      <find>data_test</find>
+      <find>visible_units_placeholder</find>
+      <find>SupervisedDBNRegression</find>
+      <find>SupervisedDBNRegression(</find>
+      <find>self.train_loss</find>
+      <find>RBM Reconstruction error</find>
+      <find>train_loss</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -145,7 +174,11 @@
       <replace>train_with_element_option</replace>
       <replace>hmMemory</replace>
       <replace>i ==</replace>
+      <replace>update_train_lost</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -172,13 +205,16 @@
         <option value="$PROJECT_DIR$/examples/__init__.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/dbn/models.py" />
-        <option value="$PROJECT_DIR$/examples/lorenz.py" />
-        <option value="$PROJECT_DIR$/dbn/tensorflow/models.py" />
-        <option value="$PROJECT_DIR$/examples/note.txt" />
         <option value="$PROJECT_DIR$/examples/ParRandom.py" />
-        <option value="$PROJECT_DIR$/examples/HSElement.py" />
+        <option value="$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz.txt" />
+        <option value="$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt" />
+        <option value="$PROJECT_DIR$/examples/note.txt" />
         <option value="$PROJECT_DIR$/examples/HSMemory.py" />
+        <option value="$PROJECT_DIR$/examples/HSElement.py" />
         <option value="$PROJECT_DIR$/examples/lorenz-hs.py" />
+        <option value="$PROJECT_DIR$/dbn/tensorflow/models.py" />
+        <option value="$PROJECT_DIR$/examples/RandomRegression.py" />
+        <option value="$PROJECT_DIR$/examples/lorenz.py" />
       </list>
     </option>
   </component>
@@ -193,18 +229,23 @@
     <option name="width" value="1280" />
     <option name="height" value="740" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
               <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
+              <item name="dbn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
@@ -221,29 +262,31 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563082012050" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563620023828" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32413793" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\ID\deep-belief-network\examples\chaotic-timeseries" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/examples/timeseries" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Project\ID\deep-belief-network\examples" />
       <recent name="$PROJECT_DIR$/examples/timeseries" />
       <recent name="$PROJECT_DIR$/examples" />
       <recent name="$PROJECT_DIR$/examples/chaotic-timeseries" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Project\ID\deep-belief-network\examples\chaotic-timeseries" />
-      <recent name="$PROJECT_DIR$/examples" />
-      <recent name="$PROJECT_DIR$/examples/timeseries" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,9 +394,6 @@
       <module name="deep-belief-network-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -444,12 +484,14 @@
       <workItem from="1556892643750" duration="10038000" />
       <workItem from="1557626509542" duration="3947000" />
       <workItem from="1561988796154" duration="2577000" />
-      <workItem from="1563071694454" duration="10133000" />
+      <workItem from="1563071694454" duration="11571000" />
+      <workItem from="1563087293601" duration="7480000" />
+      <workItem from="1563590962121" duration="25115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127529000" />
+    <option name="totallyTimeSpent" value="161562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,7 +506,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.17019667" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Favorites" order="2" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Designer" order="3" />
@@ -472,26 +514,26 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49621785" weight="0.265745" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.90468985" weight="0.58371735" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.80484116" weight="0.39631337" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49621785" weight="0.3686636" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.90468985" weight="0.49923196" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.80484116" weight="0.43164364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" weight="0.265745" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.25505444" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3289689" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.30413625" weight="0.24962178" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.4958159" visible="true" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.4958159" visible="true" weight="0.24962178" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.49635038" weight="0.32980332" />
-      <window_info anchor="right" content_ui="combo" x="167" y="77" width="946" height="631" id="SciView" order="4" sideWeight="0.6079812" weight="0.20272315" />
+      <window_info anchor="right" content_ui="combo" x="167" y="77" width="946" height="631" id="SciView" order="4" sideWeight="0.6027027" visible="true" weight="0.1860817" />
       <window_info anchor="right" id="Data View" order="5" />
-      <window_info anchor="right" x="0" y="0" width="270" height="537" id="Documentation" order="6" sideWeight="0.5041841" side_tool="true" weight="0.24962178" />
+      <window_info anchor="right" x="0" y="0" width="270" height="537" id="Documentation" order="6" sideWeight="0.3972973" side_tool="true" weight="0.3472012" />
       <window_info anchor="right" id="Maven" order="7" sideWeight="0.49635038" weight="0.32980332" />
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
@@ -499,7 +541,7 @@
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.17019667" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Favorites" order="2" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Designer" order="3" />
@@ -507,26 +549,26 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49621785" visible="true" weight="0.265745" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.90468985" weight="0.58371735" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.80484116" weight="0.39631337" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49621785" weight="0.3686636" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.90468985" visible="true" weight="0.49923196" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.80484116" weight="0.43164364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" visible="true" weight="0.265745" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" weight="0.265745" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.25505444" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3289689" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.30413625" weight="0.24962178" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.4958159" visible="true" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.4958159" visible="true" weight="0.24962178" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.49635038" weight="0.32980332" />
-      <window_info anchor="right" content_ui="combo" x="167" y="77" width="946" height="631" id="SciView" order="4" sideWeight="0.6079812" weight="0.20272315" />
+      <window_info anchor="right" content_ui="combo" x="167" y="77" width="946" height="631" id="SciView" order="4" sideWeight="0.6027027" visible="true" weight="0.1860817" />
       <window_info anchor="right" id="Data View" order="5" />
-      <window_info anchor="right" x="0" y="0" width="270" height="537" id="Documentation" order="6" sideWeight="0.5041841" side_tool="true" visible="true" weight="0.24962178" />
+      <window_info anchor="right" x="0" y="0" width="270" height="537" id="Documentation" order="6" sideWeight="0.3972973" side_tool="true" weight="0.3472012" />
       <window_info anchor="right" id="Maven" order="7" sideWeight="0.49635038" weight="0.32980332" />
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
@@ -555,17 +597,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/examples/lorenz-hs.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="5" />
+          <line>75</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/examples/lorenz-hs.py</url>
           <line>78</line>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/examples/HSElement.py</url>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/examples/lorenz-hs.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/examples/lorenz-hs.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dbn/models.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dbn/models.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/examples/lorenz.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/examples/lorenz.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -576,26 +644,17 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="regressor.train_loss" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/unsupervised_demo.py" />
-    <entry file="file://$PROJECT_DIR$/examples/mackey_Glass.py" />
-    <entry file="file://$PROJECT_DIR$/examples/co2.py" />
-    <entry file="file://$PROJECT_DIR$/dbn/activations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/IBM.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/tensorflow/python/keras/layers/cudnn_recurrent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2414">
@@ -644,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/-1725681357/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="4434" column="35" selection-start-line="4434" selection-start-column="22" selection-end-line="4434" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9078">
@@ -658,24 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/preprocessing/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6171">
-          <caret line="390" column="8" selection-start-line="390" selection-start-column="8" selection-end-line="390" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3825">
           <caret line="315" column="42" selection-start-line="315" selection-start-column="42" selection-end-line="315" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/metrics/regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -689,13 +727,6 @@
     <entry file="file://$PROJECT_DIR$/examples/restore_test.py" />
     <entry file="file://$PROJECT_DIR$/examples/Rossler.py" />
     <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Mackey-Glass.txt" />
-    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8160">
-          <caret line="480" selection-start-line="480" selection-end-line="480" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/ROSSLER.txt" />
     <entry file="file://$PROJECT_DIR$/examples/ipc_Spain.py" />
     <entry file="file://$PROJECT_DIR$/examples/airPassengers.py" />
@@ -753,91 +784,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbn/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="689" column="6" selection-start-line="689" selection-start-column="6" selection-end-line="689" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ParRandom.py" />
     <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
+        <state relative-caret-position="107">
+          <caret line="1734" selection-start-line="1734" selection-end-line="1734" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbn/tensorflow/models.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/preprocessing/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5882">
+          <caret line="373" column="17" selection-start-line="373" selection-start-column="8" selection-end-line="373" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbn/utils.py">
+    <entry file="file://$USER_HOME$/.IntelliJIdea2018.3/system/python_stubs/-1725681357/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75157">
+          <caret line="4421" column="8" selection-start-line="4421" selection-start-column="8" selection-end-line="4421" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="992" column="19" lean-forward="true" selection-start-line="992" selection-start-column="19" selection-end-line="992" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/ops/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="2830" selection-start-line="2830" selection-end-line="2830" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="548" column="35" lean-forward="true" selection-start-line="548" selection-start-column="35" selection-end-line="548" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="390" column="18" lean-forward="true" selection-start-line="390" selection-start-column="18" selection-end-line="390" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/note.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/lorenz.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/metrics/regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="52" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1262">
+          <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/ParRandom.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="115">
+          <caret line="620" selection-start-line="620" selection-end-line="620" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/HSElement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="89" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/HSMemory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="94">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="52" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dbn/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="343" column="23" lean-forward="true" selection-start-line="343" selection-start-column="23" selection-end-line="343" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbn/tensorflow/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="482" column="6" selection-start-line="482" selection-start-column="6" selection-end-line="482" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/RandomRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbn/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/lorenz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/lorenz-hs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="182">
+          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
