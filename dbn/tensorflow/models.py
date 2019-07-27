@@ -216,7 +216,8 @@ class BinaryRBM(BaseBinaryRBM, BaseTensorFlowModel):
                          feed_dict={self.visible_units_placeholder: batch})
             if self.verbose:
                 error = self._compute_reconstruction_error(data)
-                print(">> Epoch %d finished \tRBM Reconstruction error %f" % (iteration, error))
+                #  Luu comment
+                #  print(">> Epoch %d finished \tRBM Reconstruction error %f" % (iteration, error))
 
     def _compute_hidden_units_matrix(self, matrix_visible_units):
         """
@@ -455,7 +456,9 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
                 #  Luu remove test
                 #self.test_loss.append(test_error)
                 #print(">> Epoch %d finished \tMLP MSE training loss %f\t MSE testing loss %f" % (iteration, train_error, test_error))
-                print(">> Epoch %d finished \tMLP MSE training loss %f\t" % (iteration, train_error))
+
+                # Luu comment
+                #  print(">> Epoch %d finished \tMLP MSE training loss %f\t" % (iteration, train_error))
 
     def transform(self, X):
         feed_dict = {self.visible_units_placeholder: X}

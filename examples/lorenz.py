@@ -8,7 +8,7 @@ from dbn.tensorflow import SupervisedDBNRegression
 from dbn.utils import series_to_supervised, split_data, mean_absolute_percentage_error, read_file
 from examples.RandomRegression import RandomRegression
 
-path = 'chaotic-timeseries/Lorenz2.txt'
+path = 'chaotic-timeseries/Lorenz3.txt'
 xs = np.array(read_file(path))
 
 plt.plot(xs)
@@ -35,26 +35,35 @@ cost_function_name = 'mse'
 # cost_function_name = 'mae'
 # cost_function_name = 'mape'
 
-
-
 start_time = time.time()
 
 main_regression = SupervisedDBNRegression()
-min_train_loss = 1000
+min_mse = 1000
 arr_train_loss = []
 
-for i in range(1, 11):
-    regressor = RandomRegression.create_random_model()
+result_data = []
+result_label = ('learning_rate_rbm', 'learning_rate', 'mse_train', 'mse_test', 'min_mse_label')
+best_lrr = 0
+best_lr = 0
+for i in range(0, 3):
+    regressor, tmp_lrr, tmp_lr = RandomRegression.create_random_model()
     regressor.fit(data_train, label_train)
-    tmp_train_lost = sum(regressor.train_loss) / 1500
-    arr_train_loss.append(tmp_train_lost)
-    if tmp_train_lost < min_train_loss:
-        min_train_loss = tmp_train_lost
-        tmp_main_regression = main_regression
-        main_regression = regressor
-        del tmp_main_regression
+    tmp_train_mse = sum(regressor.train_loss) / 1500
+    tmp_min_mse_label = 'MORE BAD'
+
+    # Test
+    Y_pred_test = regressor.predict(data_test)
+    tmp_test_mse = mean_squared_error(label_test, Y_pred_test)
+
+    if tmp_test_mse < min_mse:
+        min_mse = tmp_test_mse
+        best_lrr = tmp_lrr
+        best_lr = tmp_lr
+        tmp_min_mse_label = 'MORE WELL'
     else:
         del regressor
+    tmp_element_data = [tmp_lrr, tmp_lr, tmp_train_mse, tmp_test_mse, tmp_min_mse_label]
+    result_data.append(tmp_element_data)
 
 '''
 main_regression = SupervisedDBNRegression(hidden_layers_structure=[5],
@@ -74,6 +83,7 @@ stop_time = time.time()
 
 print("THE TIME FOR TRAINING IS: " + str((stop_time - start_time)) + ' second')
 
+'''
 plt.figure(figsize=(8, 5))
 plt.plot(main_regression.train_loss, 'r', label='training-loss')
 plt.plot(main_regression.test_loss, 'g', label='test-loss')
@@ -81,11 +91,10 @@ plt.legend(loc='upper right')
 plt.ylabel('loss')
 plt.ylim([0, 0.002])
 plt.show()
-
-# Test
-Y_pred_test = main_regression.predict(data_test)
+'''
 
 # Change to void error
+'''
 inverse_label_train = minmax.inverse_transform(label_train.reshape(-1, 1))
 inverse_label_test = minmax.inverse_transform(label_test)
 inverse_Y_pred_test = minmax.inverse_transform(Y_pred_test)
@@ -105,10 +114,21 @@ plt.legend(loc='upper right')
 plt.ylabel('x(t)')
 plt.title("Testing Loren Chaos Time Series")
 plt.show()
+print('Done.  \n MSE_TEST: %f' % tmp_test_mse)
+tmp_test_mae = mean_absolute_error(label_test, Y_pred_test)
+print('Done.  \n MAE_TEST: %f' % tmp_test_mae)
+tmp_test_mape = mean_absolute_percentage_error(label_test, Y_pred_test)
+print('Done.  \n MAPE_TEST: %f' % tmp_test_mape)
+'''
+# Print result
+fig, ax = plt.subplots()
 
-print('Done.  \n MSE_TEST: %f' %
-      (mean_squared_error(label_test, Y_pred_test)))
-print('Done.  \n MAE_TEST: %f' %
-      (mean_absolute_error(label_test, Y_pred_test)))
-print('Done.  \n MAPE_TEST: %f' %
-      (mean_absolute_percentage_error(label_test, Y_pred_test)))
+# hide axes
+fig.patch.set_visible(False)
+ax.axis('off')
+ax.axis('tight')
+ax.table(cellText=result_data, colLabels=result_label, loc='center')
+
+fig.tight_layout()
+
+plt.show()
