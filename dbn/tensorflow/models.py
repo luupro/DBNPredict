@@ -3,6 +3,7 @@ from abc import ABCMeta
 from typing import List, Any
 
 import numpy as np
+import cupy as cp
 import tensorflow as tf
 from sklearn.base import ClassifierMixin, RegressorMixin
 
@@ -11,11 +12,12 @@ from ..models import BaseModel
 from ..models import BinaryRBM as BaseBinaryRBM
 from ..models import UnsupervisedDBN as BaseUnsupervisedDBN
 from ..utils import batch_generator, to_categorical
-
+import time
+from examples.TensorGlobal import TensorGlobal
+import copy
 
 def close_session():
     sess.close()
-
 
 sess = tf.Session()
 atexit.register(close_session)
@@ -86,7 +88,11 @@ class BinaryRBM(BaseBinaryRBM, BaseTensorFlowModel):
 
         # Initialize RBM parameters
         self._build_model()
-
+        if TensorGlobal.sessFlg:
+            global sess
+            sess.close()
+            sess = tf.Session()
+            TensorGlobal.sessFlg = False
         sess.run(tf.variables_initializer([self.W, self.c, self.b]))
 
         if self.optimization_algorithm == 'sgd':
@@ -216,8 +222,8 @@ class BinaryRBM(BaseBinaryRBM, BaseTensorFlowModel):
                          feed_dict={self.visible_units_placeholder: batch})
             if self.verbose:
                 error = self._compute_reconstruction_error(data)
-                #  Luu comment
-                #  print(">> Epoch %d finished \tRBM Reconstruction error %f" % (iteration, error))
+
+                print(">> Epoch %d finished \tRBM Reconstruction error %f" % (iteration, error))
 
     def _compute_hidden_units_matrix(self, matrix_visible_units):
         """
@@ -300,12 +306,12 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
                 self.__setattr__(attr_name, tf.Variable(value))
         else:
             if self.unsupervised_dbn.activation_function == 'sigmoid':
-                stddev = 1.0 / np.sqrt(self.input_units)
+                stddev = 1.0 / cp.sqrt(self.input_units)
                 self.W = weight_variable(tf.random_normal, [self.input_units, self.num_classes], stddev)
                 self.b = weight_variable(tf.random_normal, [self.num_classes], stddev)
                 self._activation_function_class = tf.nn.sigmoid
             elif self.unsupervised_dbn.activation_function == 'relu':
-                stddev = 0.1 / np.sqrt(self.input_units)
+                stddev = 0.1 / cp.sqrt(self.input_units)
                 self.W = weight_variable(tf.truncated_normal, [self.input_units, self.num_classes], stddev)
                 self.b = bias_variable(stddev, [self.num_classes])
                 self._activation_function_class = tf.nn.relu
@@ -406,7 +412,7 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
     def _fine_tuning(self, data, _labels):
         self.num_classes = self._determine_num_output_neurons(_labels)
         if self.num_classes == 1:
-            _labels = np.expand_dims(_labels, -1)
+            _labels = cp.expand_dims(_labels, -1)
 
         self._build_model()
 
@@ -457,8 +463,7 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
                 #self.test_loss.append(test_error)
                 #print(">> Epoch %d finished \tMLP MSE training loss %f\t MSE testing loss %f" % (iteration, train_error, test_error))
 
-                # Luu comment
-                #  print(">> Epoch %d finished \tMLP MSE training loss %f\t" % (iteration, train_error))
+                print(">> Epoch %d finished \tMLP MSE training loss %f\t" % (iteration, train_error))
 
     def transform(self, X):
         feed_dict = {self.visible_units_placeholder: X}
@@ -473,7 +478,7 @@ class TensorFlowAbstractSupervisedDBN(BaseAbstractSupervisedDBN, BaseTensorFlowM
         :return:
         """
         if len(X.shape) == 1:  # It is a single sample
-            X = np.expand_dims(X, 0)
+            X = cp.expand_dims(X, 0)
         predicted_data = self._compute_output_units_matrix(X)
         return predicted_data
 
@@ -570,7 +575,7 @@ class SupervisedDBNClassification(TensorFlowAbstractSupervisedDBN, ClassifierMix
 
     def predict(self, X):
         probs = self.predict_proba(X)
-        indexes = np.argmax(probs, axis=1)
+        indexes = cp.argmax(probs, axis=1)
         return self._transform_network_format_to_labels(indexes)
 
     def predict_proba(self, X):
@@ -589,7 +594,7 @@ class SupervisedDBNClassification(TensorFlowAbstractSupervisedDBN, ClassifierMix
         :return:
         """
         if len(X.shape) == 1:  # It is a single sample
-            X = np.expand_dims(X, 0)
+            X = cp.expand_dims(X, 0)
 
         predicted_probs = self.predict_proba(X)
 
@@ -606,5 +611,5 @@ class SupervisedDBNClassification(TensorFlowAbstractSupervisedDBN, ClassifierMix
         return result
 
     def _determine_num_output_neurons(self, labels):
-        return len(np.unique(labels))
+        return len(cp.unique(labels))
 

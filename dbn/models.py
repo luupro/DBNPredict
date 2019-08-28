@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-import numpy as np
+import cupy as np
 from scipy.stats import truncnorm
 from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin, RegressorMixin
 

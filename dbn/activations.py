@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-import numpy as np
+import cupy as np
 
 
 class ActivationFunction(object):
