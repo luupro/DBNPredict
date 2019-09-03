@@ -3,7 +3,8 @@ from random import *
 
 class HSElement:
     #  standard values
-    config_hls = 5
+    config_number_visible_input = randint(1, 10)
+    config_number_hidden_input = randint(1, 10)
     config_lrr = 0.01
     config_lrr_range_err = 0.005
     config_lr = 0.03
@@ -19,12 +20,12 @@ class HSElement:
     learning_rate = 0
 
     def __init__(self):
-        random_var = uniform(0, 1)
-        self.hidden_layers_structure = [self.config_hls]
+        self.config_number_visible_input = randint(1, 10)
+        self.config_number_hidden_input = randint(1, 10)
         self.learning_rate_rbm = (self.config_lrr - self.config_lrr_range_err) + \
-                                 (random_var * 2 * self.config_lrr_range_err)
+                                 (uniform(0, 1) * 2 * self.config_lrr_range_err)
         self.learning_rate = (self.config_lr - self.config_lr_range_err) + \
-                             (random_var * 2 * self.config_lr_range_err)
+                             (uniform(0, 1) * 2 * self.config_lr_range_err)
         self.n_epochs_rbm = self.config_ner
         self.n_iter_back_prop = self.config_n_iter_back_prop
         self.contrastive_divergence_iter = self.config_cdi
@@ -33,3 +34,4 @@ class HSElement:
         self.n_hidden_layers_mlp = self.config_nhlm
         self.cost_function_name = 'mse'
         self.train_lost = 1000
+        self.mse = 1000
