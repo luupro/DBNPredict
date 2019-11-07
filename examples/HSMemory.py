@@ -2,13 +2,16 @@ from examples.HSElement import HSElement
 from dbn.tensorflow import SupervisedDBNRegression
 from dbn.utils import series_to_supervised, split_data
 from sklearn.metrics.regression import mean_squared_error
+from examples.TensorGlobal import TensorGlobal
+import tensorflow as tf
+
 
 def get_worst_element():
     return HSMemory.hmMemory[HSMemory.max_index]
 
 
 class HSMemory:
-    number_decision_var = 2  # need review this
+    number_decision_var = 4  # need review this
     hmMemory = []
     HMCR = 0.3
     PAR = 0.3
@@ -16,7 +19,7 @@ class HSMemory:
     min_mse = 1000
     max_index = 0  # index for worst element
     min_index = 0  # index for best element
-    HMS = 7
+    HMS = 9
 
     def __init__(self, tmp_list):
         self.init_harmony_memory(tmp_list)
@@ -41,13 +44,13 @@ class HSMemory:
             tmp_element.index = i  # set index in HMS for current element
             tmp_element = HSMemory.update_mse(tmp_element, tmp_list)
             # Set min
-            if (HSMemory.min_mse == 1000) or (HSMemory.min_mse > tmp_element.mse):
-                HSMemory.min_mse = tmp_element.mse
+            if (HSMemory.min_mse == 1000) or (HSMemory.min_mse > tmp_element.test_mse):
+                HSMemory.min_mse = tmp_element.test_mse
                 HSMemory.min_index = i
                 print('update min in Init min_index: %f' % i)
             # Set max
-            if (HSMemory.max_mse == 0) or (HSMemory.max_mse < tmp_element.mse):
-                HSMemory.max_mse = tmp_element.mse
+            if (HSMemory.max_mse == 0) or (HSMemory.max_mse < tmp_element.test_mse):
+                HSMemory.max_mse = tmp_element.test_mse
                 HSMemory.max_index = i
                 print('update max in Init max_index: %f' % i)
             HSMemory.hmMemory.append(tmp_element)
@@ -57,9 +60,9 @@ class HSMemory:
     def update_mse(tmp_input_element, tmp_list):
         data_train, label_train, data_test, label_test = \
             HSMemory.create_train_and_test_data(tmp_list, tmp_input_element.number_visible_input)
-        tmp_return_element = SupervisedDBNRegression(
-            hidden_layers_structure=[tmp_input_element.config_number_visible_input,
-                                     tmp_input_element.config_number_hidden_input],
+        tmp_regression = SupervisedDBNRegression(
+            hidden_layers_structure=[tmp_input_element.number_visible_input,
+                                     tmp_input_element.number_hidden_input],
             learning_rate_rbm=tmp_input_element.learning_rate_rbm,
             learning_rate=tmp_input_element.learning_rate,
             n_epochs_rbm=tmp_input_element.n_epochs_rbm,
@@ -70,13 +73,22 @@ class HSMemory:
             n_hidden_layers_mlp=tmp_input_element.n_hidden_layers_mlp,
             cost_function_name=tmp_input_element.cost_function_name)
 
-        tmp_return_element.fit(data_train, label_train)  # train data
-        tmp_input_element.train_lost = sum(tmp_return_element.train_loss) / HSElement.config_n_iter_back_prop
+        tmp_regression.fit(data_train, label_train)  # train data
+        tmp_input_element.train_mse = sum(tmp_regression.train_loss) / HSElement.config_n_iter_back_prop
 
-        y_pred_test = tmp_return_element.predict(data_test)
-        tmp_input_element.mse = mean_squared_error(label_test, y_pred_test)
+        y_pred_test = tmp_regression.predict(data_test)
+        tmp_input_element.test_mse = mean_squared_error(label_test, y_pred_test)
 
-        del tmp_return_element
+        # add to export result
+        tmp_result_data = [tmp_input_element.learning_rate_rbm,
+                           tmp_input_element.learning_rate, tmp_input_element.number_visible_input,
+                           tmp_input_element.number_hidden_input, tmp_input_element.train_mse,
+                           tmp_input_element.test_mse, '', '', '']
+        TensorGlobal.followHs.append(tmp_result_data)
+
+        TensorGlobal.sessFlg = True
+        tf.reset_default_graph()
+        del tmp_regression
         return tmp_input_element
 
     @staticmethod
@@ -107,10 +119,10 @@ class HSMemory:
     @staticmethod
     def update_max_index():
         tmp_max_element = HSMemory.hmMemory[HSMemory.max_index]
-        HSMemory.max_mse = tmp_max_element.mse
+        HSMemory.max_mse = tmp_max_element.test_mse
 
         for i in range(0, HSMemory.HMS):
             tmp_element = HSMemory.hmMemory[i]
-            if HSMemory.max_mse < tmp_element.mse:
-                HSMemory.max_mse = tmp_element.mse
+            if HSMemory.max_mse < tmp_element.test_mse:
+                HSMemory.max_mse = tmp_element.test_mse
                 HSMemory.max_index = i

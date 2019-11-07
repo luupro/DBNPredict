@@ -3,8 +3,6 @@ from random import *
 
 class HSElement:
     #  standard values
-    config_number_visible_input = randint(1, 10)
-    config_number_hidden_input = randint(1, 10)
     config_lrr = 0.01
     config_lrr_range_err = 0.005
     config_lr = 0.03
@@ -16,12 +14,10 @@ class HSElement:
     config_af = 'relu'
     config_nhlm = 1
     config_cfn = 'mse'
-    learning_rate_rbm = 0
-    learning_rate = 0
 
     def __init__(self):
-        self.config_number_visible_input = randint(1, 10)
-        self.config_number_hidden_input = randint(1, 10)
+        self.number_visible_input = randint(1, 10)
+        self.number_hidden_input = randint(1, 10)
         self.learning_rate_rbm = (self.config_lrr - self.config_lrr_range_err) + \
                                  (uniform(0, 1) * 2 * self.config_lrr_range_err)
         self.learning_rate = (self.config_lr - self.config_lr_range_err) + \
@@ -33,5 +29,5 @@ class HSElement:
         self.activation_function = 'relu'
         self.n_hidden_layers_mlp = self.config_nhlm
         self.cost_function_name = 'mse'
-        self.train_lost = 1000
-        self.mse = 1000
+        self.train_mse = 1000
+        self.test_mse = 1000

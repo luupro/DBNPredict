@@ -1,14 +1,14 @@
-import numpy as np
-
-from examples.TensorGlobal import TensorGlobal
-from examples.HSMemory import HSMemory
-from examples.HSElement import HSElement
-from sklearn.preprocessing import MinMaxScaler
-from dbn.tensorflow import SupervisedDBNRegression
-from dbn.utils import read_file
-from random import *
-import xlsxwriter
 from datetime import datetime
+from random import *
+
+import numpy as np
+import xlsxwriter
+from sklearn.preprocessing import MinMaxScaler
+
+from dbn.utils import read_file
+from examples.HSElement import HSElement
+from examples.HSMemory import HSMemory
+from examples.TensorGlobal import TensorGlobal
 
 
 def transfer_hs_memory_data(tmp_hs_memory):  # print HS
@@ -21,13 +21,14 @@ def transfer_hs_memory_data(tmp_hs_memory):  # print HS
         tmp_number_hidden = tmp1_hs_element.number_hidden_input
         tmp_train_mse = tmp1_hs_element.train_mse
         tmp_test_mse = tmp1_hs_element.test_mse
-        tmp1_element_data = [tmp_lrr, tmp_lr, tmp_number_visible, tmp_number_hidden, tmp_train_mse, tmp_test_mse, '']
+        tmp1_element_data = [tmp_lrr, tmp_lr, tmp_number_visible, tmp_number_hidden,
+                             tmp_train_mse, tmp_test_mse, '', '', '']
         tmp_all_data.append(tmp1_element_data)
     return tmp_all_data
 # --------------------------------------------
 
 
-path = 'chaotic-timeseries/Lorenz3.txt'
+path = 'chaotic-timeseries/Lorenz.txt'
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -38,10 +39,10 @@ cost_function_name = 'mse'
 # cost_function_name = 'mape'
 
 # Loop for
-element = HSElement()
+# element = HSElement()
 hs_memory_object = HSMemory(lorenz_scale.tolist())
-main_regression = SupervisedDBNRegression()
-NI = 5  # number of improvisations
+# main_regression = SupervisedDBNRegression()
+NI = 50  # number of improvisations
 
 
 # Improve a new hamony
@@ -55,17 +56,15 @@ for h in range(0, NI):
             else:
                 tmp_hm_element = HSMemory.hmMemory[HSMemory.min_index]
             if i == 1:
-                new_harmony_element.learning_rate_rbm = \
-                    tmp_hm_element.learning_rate_rbm + uniform(-HSElement.config_lrr_range_err,
-                                                               HSElement.config_lrr_range_err)
+                new_harmony_element.learning_rate_rbm = HSElement.get_new_lrr(tmp_hm_element.learning_rate_rbm)
             if i == 2:
-                new_harmony_element.learning_rate = \
-                    tmp_hm_element.learning_rate + uniform(-HSElement.config_lr_range_err,
-                                                           HSElement.config_lr_range_err)
+                new_harmony_element.learning_rate = HSElement.get_new_lr(tmp_hm_element.learning_rate)
             if i == 3:
-                new_harmony_element.number_hidden_input = tmp_hm_element.number_visible_input
+                new_harmony_element.number_hidden_input = \
+                    HSElement.get_new_number_input(tmp_hm_element.number_visible_input)
             if i == 4:
-                new_harmony_element.number_hidden_input = tmp_hm_element.number_hidden_input
+                new_harmony_element.number_hidden_input \
+                    = HSElement.get_new_number_input(tmp_hm_element.number_hidden_input)
 
     # Step4 Update harmony memory
     print('Update train mse  for Improve harmony h: %f' % h)
@@ -81,7 +80,7 @@ for h in range(0, NI):
             HSMemory.min_index = HSMemory.max_index  # update min_index
             tmp_label_new_min = ' - new_min_index: ' + str(HSMemory.min_index)
         HSMemory.update_max_index()  # update max_index
-        tmp_label_new_max = ' - new_max_index: ' +  str(HSMemory.max_index)
+        tmp_label_new_max = ' - new_max_index: ' + str(HSMemory.max_index)
         tmp_last_result = TensorGlobal.followHs[-1]
         tmp_last_result[-1] = tmp_label_new_min
         tmp_last_result[-2] = tmp_label_new_max
@@ -89,26 +88,6 @@ for h in range(0, NI):
         # print('NEw max_index: %f' % HSMemory.max_index)
 
 result_data = transfer_hs_memory_data(HSMemory.hmMemory)
-
-# Export result to excel file
-'''
-now = datetime.now()
-dt_string = now.strftime("%d%m%Y%H%M%S")
-workbook = xlsxwriter.Workbook('result_hs_' + dt_string + '.xlsx')
-worksheet = workbook.add_worksheet()
-row = 1
-col = 0
-
-for learning_rate_rbm, learning_rate, number_visible_input, number_visible_hidden, mse_train, mse_test in result_data:
-    worksheet.write(row, col, learning_rate_rbm)
-    worksheet.write(row, col + 1, learning_rate)
-    worksheet.write(row, col + 2, number_visible_input)
-    worksheet.write(row, col + 3, number_visible_hidden)
-    worksheet.write(row, col + 4, mse_train)
-    worksheet.write(row, col + 5, mse_test)
-    row += 1
-workbook.close()
-'''
 
 
 def export_result(file_name, tmp_array):
@@ -135,5 +114,5 @@ def export_result(file_name, tmp_array):
     workbook.close()
 
 
-export_result('result_hs_memory', result_data)
+# export_result('result_hs_memory', result_data)
 export_result('result_hs_full_', TensorGlobal.followHs)

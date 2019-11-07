@@ -15,25 +15,12 @@ from examples.HSMemory import HSMemory
 
 start_begin = time.time()
 
-path = 'chaotic-timeseries/Lorenz.txt'
+path = 'chaotic-timeseries/ipcSpain.txt'
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
 minmax = MinMaxScaler().fit(xs.astype('float32'))
 lorenz_scale = minmax.transform(xs.astype('float32'))
-
-'''
-def create_train_and_test_data(tmp_list, number_inputs):
-    tmp_data = series_to_supervised(tmp_list, number_inputs)
-    tmp_data_input = []
-    x = ['t-'+str(i) for i in range(1, 11)]
-    for i in range(1, 11):
-        if number_inputs == i:
-            tmp_data_input = tmp_data[x[i-1::-1]].values
-
-    tmp_data_labels = tmp_data['t'].values.reshape(-1, 1)
-    return split_data(tmp_data_input, tmp_data_labels)
-'''
 
 cost_function_name = 'mse'
 min_mse = 1000
@@ -65,7 +52,16 @@ for i in range(0, 50):
     # Test
     start_time = time.time()
     Y_pred_test = regressor.predict(data_test)
-    tmp_test_mse = mean_squared_error(label_test, Y_pred_test)
+    print("Begin to call mean_squared_error")
+    check_nan = np.isnan(Y_pred_test).any()
+
+    if check_nan:
+        tmp_test_mse = 1000
+    else:
+        tmp_test_mse = mean_squared_error(label_test, Y_pred_test)
+    if np.isnan(tmp_train_mse):
+        tmp_train_mse = 1000
+
     stop_time = time.time()
     print("THE TIME FOR TEST: " + str((stop_time - start_time)) + ' second')
     TensorGlobal.sessFlg = True
@@ -76,6 +72,7 @@ for i in range(0, 50):
     result_data.append(tmp_element_data)
 
 # Export result to excel file
+print("Begin to print result")
 now = datetime.now()
 dt_string = now.strftime("%d%m%Y%H%M%S")
 workbook = xlsxwriter.Workbook('result_' + dt_string + '.xlsx')
