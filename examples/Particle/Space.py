@@ -1,5 +1,8 @@
 import random
 import numpy as np
+from .Position import Position
+from examples.HSMemory import HSMemory
+import copy 
 
 
 class Space:
@@ -13,34 +16,51 @@ class Space:
         self.target_error = target_error
         self.n_particles = n_particles
         self.particles = []
-        self.gbest_value = float('inf')
-        self.gbest_position = np.array([random.random()*50, random.random()*50])
+        self.gbest_value = 1000
+        self.gbest_position = Position()
 
     def print_particles(self):
         for particle in self.particles:
             particle.__str__()
 
     def fitness(self, particle):
-        return particle.position[0] ** 2 + particle.position[1] ** 2 + 1
-
-    def set_pbest(self):
+        tmpPosition = copy.deepcopy(particle.position)
+        tmpPosition = HSMemory. \
+        update_mse(tmpPosition, particle.data)
+        return tmpPosition
+        
+    def set_pbest_gbest(self):
+		loop_index = 1
         for particle in self.particles:
             fitness_cadidate = self.fitness(particle)
-            if(particle.pbest_value > fitness_cadidate):
-                particle.pbest_value = fitness_cadidate
+			# insert more infor for result
+			tmp_last_result = TensorGlobal.followHs[-1]
+			tmp_last_result[6] = "Particle_" + str(loop_index)
+            if(particle.pbest_value > fitness_cadidate.test_mse):
+                particle.pbest_value = fitness_cadidate.test_mse
                 particle.pbest_position = particle.position
-
-
-    def set_gbest(self):
-        for particle in self.particles:
-            best_fitness_cadidate = self.fitness(particle)
-            if(self.gbest_value > best_fitness_cadidate):
-                self.gbest_value = best_fitness_cadidate
+			# set gbest
+			if(self.gbest_value > fitness_cadidate.test_mse):
+                self.gbest_value = fitness_cadidate.test_mse
                 self.gbest_position = particle.position
+			loop_index = loop_index + 1
+
+    #def set_gbest(self):
+        #for particle in self.particles:
+            #best_fitness_cadidate = self.fitness(particle)
+            #if(self.gbest_value > best_fitness_cadidate):
+                #self.gbest_value = best_fitness_cadidate
+                #self.gbest_position = particle.position
 
     def move_particles(self):
         for particle in self.particles:
-            new_velocity = (Space.W*particle.velocity) + (Space.c1*random.random()) * (particle.pbest_position - particle.position) + \
-                           (random.random()*Space.c2) * (self.gbest_position - particle.position)
-            particle.velocity = new_velocity
+            lrr_velocity = (Space.W*particle.velocity[0]) + (Space.c1*random.random()) * (particle.pbest_position.learning_rate_rbm - particle.learning_rate_rbm) + \
+                           (random.random()*Space.c2) * (self.gbest_position.learning_rate_rbm - particle.position.learning_rate_rbm)
+            lr_velocity = (Space.W*particle.velocity[1]) + (Space.c1*random.random()) * (particle.pbest_position.learning_rate - particle.learning_rate) + \
+                           (random.random()*Space.c2) * (self.gbest_position.learning_rate - particle.position.learning_rate)
+            number_visible_input_velocity = (Space.W*particle.velocity[1]) + (Space.c1*random.random()) * (particle.pbest_position.number_visible_input - particle.number_visible_input) + \
+                           (random.random()*Space.c2) * (self.gbest_position.number_visible_input - particle.position.number_visible_input)
+            number_hidden_input_velocity = (Space.W*particle.velocity[1]) + (Space.c1*random.random()) * (particle.pbest_position.number_hidden_input - particle.number_hidden_input) + \
+                           (random.random()*Space.c2) * (self.gbest_position.number_hidden_input - particle.position.number_hidden_input)
+            particle.velocity = [lrr_velocity, lr_velocity, number_visible_input_velocity, number_hidden_input_velocity]
             particle.move()

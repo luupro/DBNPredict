@@ -28,7 +28,7 @@ def transfer_hs_memory_data(tmp_hs_memory):  # print HS
 # --------------------------------------------
 
 
-path = 'chaotic-timeseries/Lorenz.txt'
+path = 'chaotic-timeseries/ipcSpain.txt'
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -42,50 +42,102 @@ cost_function_name = 'mse'
 # element = HSElement()
 hs_memory_object = HSMemory(lorenz_scale.tolist())
 # main_regression = SupervisedDBNRegression()
-NI = 50  # number of improvisations
+NI = 1000  # number of improvisations
 
 
-# Improve a new hamony
+# Improve a new harmony
 for h in range(0, NI):
     new_harmony_element = HSElement()  # already random for all variable
+    min_hm_element = HSMemory.hmMemory[HSMemory.min_index]  # min HSM element
+    # Change just one decision var in one time -- no use
     for i in range(1, HSMemory.number_decision_var + 1):
-        if uniform(0, 1) <= HSMemory.HMCR:
-            if uniform(0, 1) > HSMemory.PAR:
-                random_index = randint(0, HSMemory.HMS-1)
-                tmp_hm_element = HSMemory.hmMemory[random_index]
-            else:
-                tmp_hm_element = HSMemory.hmMemory[HSMemory.min_index]
+        HSMemory.last_HMCR[i-1] = 0
+        HSMemory.last_PAR[i-1] = 0
+        if uniform(0, 1) <= HSMemory.HMCR[i-1]:
+            HSMemory.last_HMCR[i-1] = 1
+            pit_index = randint(0, HSMemory.HMS-1)
+            # keep latest param if result is better
+            if HSMemory.better_flg == 1:
+                pit_index = HSMemory.last_index
+            if HSMemory.best_flg == 1:
+                pit_index = HSMemory.min_index
+            tmp_hm_element = HSMemory.hmMemory[pit_index]
             if i == 1:
-                new_harmony_element.learning_rate_rbm = HSElement.get_new_lrr(tmp_hm_element.learning_rate_rbm)
+                new_harmony_element.learning_rate_rbm = tmp_hm_element.learning_rate_rbm
             if i == 2:
-                new_harmony_element.learning_rate = HSElement.get_new_lr(tmp_hm_element.learning_rate)
+                new_harmony_element.learning_rate = tmp_hm_element.learning_rate
             if i == 3:
-                new_harmony_element.number_hidden_input = \
-                    HSElement.get_new_number_input(tmp_hm_element.number_visible_input)
+                new_harmony_element.number_visible_input = tmp_hm_element.number_visible_input
             if i == 4:
-                new_harmony_element.number_hidden_input \
-                    = HSElement.get_new_number_input(tmp_hm_element.number_hidden_input)
+                new_harmony_element.number_hidden_input = tmp_hm_element.number_hidden_input
+            if uniform(0, 1) <= HSMemory.PAR[i-1]:
+                HSMemory.last_PAR[i-1] = 1
+                if i == 1:
+                    new_harmony_element.learning_rate_rbm = HSElement.get_new_lrr(min_hm_element.learning_rate_rbm)
+                if i == 2:
+                    new_harmony_element.learning_rate = HSElement.get_new_lr(min_hm_element.learning_rate)
+                #if i == 3:
+                    #new_harmony_element.number_visible_input = \
+                        #HSElement.get_new_number_input(min_hm_element.number_visible_input)
+                #if i == 4:
+                    #new_harmony_element.number_hidden_input = \
+                        #HSElement.get_new_number_input(min_hm_element.number_hidden_input)
 
     # Step4 Update harmony memory
     print('Update train mse  for Improve harmony h: %f' % h)
     new_harmony_element = HSMemory. \
         update_mse(new_harmony_element, lorenz_scale.tolist())
     # compare with worst element
+    tmp_last_result = TensorGlobal.followHs[-1]
     if new_harmony_element.test_mse < HSMemory.max_mse:
+        # keep parameter
+        HSMemory.better_flg = 1
+        HSMemory.last_index = HSMemory.max_index
+        for i in range(1, HSMemory.number_decision_var + 1):
+            if HSMemory.last_HMCR[i-1] == 1:
+                HSMemory.HMCR[i-1] = 1
+            else:
+                HSMemory.HMCR[i-1] = 0.7
+            #if HSMemory.last_PAR[i-1] == 1:
+                #HSMemory.PAR[i-1] = 0.2
+            #else:
+                #HSMemory.PAR[i-1] = 0.5
+
         tmp_label_replace = 'replace worst - index_hs: ' + str(HSMemory.max_index)
         tmp_label_new_min = ''
         HSMemory.hmMemory[HSMemory.max_index] = new_harmony_element  # replace worst
         if HSMemory.min_mse > new_harmony_element.test_mse:
+            HSMemory.best_flg = 1
             HSMemory.min_mse = new_harmony_element.test_mse  # update min mse
             HSMemory.min_index = HSMemory.max_index  # update min_index
             tmp_label_new_min = ' - new_min_index: ' + str(HSMemory.min_index)
+        else:
+            HSMemory.best_flg = 0
         HSMemory.update_max_index()  # update max_index
         tmp_label_new_max = ' - new_max_index: ' + str(HSMemory.max_index)
-        tmp_last_result = TensorGlobal.followHs[-1]
         tmp_last_result[-1] = tmp_label_new_min
         tmp_last_result[-2] = tmp_label_new_max
         tmp_last_result[-3] = tmp_label_replace
+        # keep last index
         # print('NEw max_index: %f' % HSMemory.max_index)
+    else:
+        # random parameter
+        for i in range(1, HSMemory.number_decision_var + 1):
+            if HSMemory.last_HMCR[i-1] == 1:
+                HSMemory.HMCR[i-1] = 0.1
+            else:
+                HSMemory.HMCR[i-1] = 0.5
+            #if HSMemory.last_PAR[i-1] == 1:
+                #HSMemory.PAR[i-1] = 0.5
+            #else:
+                #HSMemory.PAR[i-1] = 0.2
+        HSMemory.better_flg = 0
+
+    # for debug only
+    for i in range(1, HSMemory.number_decision_var + 1):
+        ii = i-8
+        tmp_last_result[ii] = str(HSMemory.last_HMCR[i-1]) + "_" + str(HSMemory.last_PAR[i-1])
+    tmp_last_result[-8] = HSMemory.last_index
 
 result_data = transfer_hs_memory_data(HSMemory.hmMemory)
 
@@ -98,18 +150,42 @@ def export_result(file_name, tmp_array):
     row = 1
     col = 0
 
+    # make header
+    arr_header = []
+    arr_header.append('learning_rate_rbm')
+    arr_header.append('learning_rate')
+    arr_header.append('number_visible_input')
+    arr_header.append('number_visible_hidden')
+    arr_header.append('mse_train')
+    arr_header.append('mse_test')
+    arr_header.append('last_index')
+    arr_header.append('hmcr_par1')
+    arr_header.append('hmcr_par2')
+    arr_header.append('hmcr_par3')
+    arr_header.append('hmcr_par4')
+    arr_header.append('label_replace')
+    arr_header.append('label_max')
+    arr_header.append('label_min')
+    tmp_array.insert(0, arr_header)
+
     for learning_rate_rbm, learning_rate, number_visible_input, number_visible_hidden, \
-        mse_train, mse_test, label_replace, label_max, label_min \
+        mse_train, mse_test, last_index, hmcr_par1, hmcr_par2, hmcr_par3, hmcr_par4, label_replace, label_max, label_min \
             in tmp_array:
-        worksheet.write(row, col, learning_rate_rbm)
-        worksheet.write(row, col + 1, learning_rate)
-        worksheet.write(row, col + 2, number_visible_input)
-        worksheet.write(row, col + 3, number_visible_hidden)
-        worksheet.write(row, col + 4, mse_train)
-        worksheet.write(row, col + 5, mse_test)
-        worksheet.write(row, col + 6, label_replace)
-        worksheet.write(row, col + 7, label_max)
-        worksheet.write(row, col + 8, label_min)
+        worksheet.write(row, col, row-1)
+        worksheet.write(row, col + 1, learning_rate_rbm)
+        worksheet.write(row, col + 2, learning_rate)
+        worksheet.write(row, col + 3, number_visible_input)
+        worksheet.write(row, col + 4, number_visible_hidden)
+        worksheet.write(row, col + 5, mse_train)
+        worksheet.write(row, col + 6, mse_test)
+        worksheet.write(row, col + 7, last_index)
+        worksheet.write(row, col + 8, hmcr_par1)
+        worksheet.write(row, col + 9, hmcr_par2)
+        worksheet.write(row, col + 10, hmcr_par3)
+        worksheet.write(row, col + 11, hmcr_par4)
+        worksheet.write(row, col + 12, label_replace)
+        worksheet.write(row, col + 13, label_max)
+        worksheet.write(row, col + 14, label_min)
         row += 1
     workbook.close()
 

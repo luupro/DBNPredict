@@ -4,6 +4,7 @@ from dbn.utils import series_to_supervised, split_data
 from sklearn.metrics.regression import mean_squared_error
 from examples.TensorGlobal import TensorGlobal
 import tensorflow as tf
+import numpy as np
 
 
 def get_worst_element():
@@ -13,13 +14,18 @@ def get_worst_element():
 class HSMemory:
     number_decision_var = 4  # need review this
     hmMemory = []
-    HMCR = 0.3
-    PAR = 0.3
+    HMCR = [0.8, 0.8, 0.8, 0.8]
+    PAR = [0.4, 0.4, 0.4, 0.4]
     max_mse = 0
     min_mse = 1000
     max_index = 0  # index for worst element
     min_index = 0  # index for best element
-    HMS = 9
+    last_index = 0
+    HMS = 10
+    better_flg = 0  # index for newest element
+    best_flg = 0
+    last_HMCR = [0, 0, 0, 0]  # property need to change
+    last_PAR = [0, 0, 0, 0]
 
     def __init__(self, tmp_list):
         self.init_harmony_memory(tmp_list)
@@ -77,13 +83,20 @@ class HSMemory:
         tmp_input_element.train_mse = sum(tmp_regression.train_loss) / HSElement.config_n_iter_back_prop
 
         y_pred_test = tmp_regression.predict(data_test)
-        tmp_input_element.test_mse = mean_squared_error(label_test, y_pred_test)
+        check_nan = np.isnan(y_pred_test).any()
+
+        if check_nan:
+            tmp_input_element.test_mse = 1000
+        else:
+            tmp_input_element.test_mse = mean_squared_error(label_test, y_pred_test)
+        if np.isnan(tmp_input_element.train_mse):
+            tmp_input_element.train_mse = 1000
 
         # add to export result
         tmp_result_data = [tmp_input_element.learning_rate_rbm,
                            tmp_input_element.learning_rate, tmp_input_element.number_visible_input,
                            tmp_input_element.number_hidden_input, tmp_input_element.train_mse,
-                           tmp_input_element.test_mse, '', '', '']
+                           tmp_input_element.test_mse, '', '', '', '', '', '', '', '']
         TensorGlobal.followHs.append(tmp_result_data)
 
         TensorGlobal.sessFlg = True
