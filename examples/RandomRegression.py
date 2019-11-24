@@ -7,18 +7,18 @@ class RandomRegression:
     number_hidden_input = randint(1, 10)
     #number_iter_backprop = 1500 #lorenz
     #number_iter_backprop = 1200
-    number_iter_backprop = 100
-    number_iter_rbm_loop = 30
+    number_iter_backprop = 500
+    number_iter_rbm_loop = 15
     tmp_learning_rate_rbm = 0.045
     tmp_learning_rate = 0.001
 
     @staticmethod
     def create_random_model():
         #tmp_learning_rate_rbm = 0.001 + uniform(0, 1) * (0.5 - 0.001) #lorenz
-        # tmp_learning_rate_rbm = 0.001 + uniform(0, 1) * (0.1 - 0.001) #random
+        RandomRegression.tmp_learning_rate_rbm = 0.001 + uniform(0, 1) * (0.1 - 0.001) #random
         #tmp_learning_rate_rbm = 0.01
         #tmp_learning_rate = 0.01 + uniform(0, 1) * (0.9 - 0.01) #lorenz
-        #tmp_learning_rate = 0.005 + uniform(0, 1) * (0.05 - 0.005) #random
+        RandomRegression.tmp_learning_rate = 0.005 + uniform(0, 1) * (0.05 - 0.005) #random
         #tmp_learning_rate = 0.005
         tmp_regressor = SupervisedDBNRegression(hidden_layers_structure=[RandomRegression.number_visible_input,
                                                                          RandomRegression.number_hidden_input],

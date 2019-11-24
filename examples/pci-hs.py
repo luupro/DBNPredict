@@ -42,8 +42,7 @@ cost_function_name = 'mse'
 # element = HSElement()
 hs_memory_object = HSMemory(lorenz_scale.tolist())
 # main_regression = SupervisedDBNRegression()
-NI = 1000  # number of improvisations
-
+NI = 2000  # number of improvisations
 
 # Improve a new harmony
 for h in range(0, NI):
@@ -141,13 +140,12 @@ for h in range(0, NI):
 
 result_data = transfer_hs_memory_data(HSMemory.hmMemory)
 
-
 def export_result(file_name, tmp_array):
     now = datetime.now()
     dt_string = now.strftime("%d%m%Y%H%M%S")
     workbook = xlsxwriter.Workbook(file_name + dt_string + '.xlsx')
     worksheet = workbook.add_worksheet()
-    row = 1
+    row = 0
     col = 0
 
     # make header
@@ -171,7 +169,7 @@ def export_result(file_name, tmp_array):
     for learning_rate_rbm, learning_rate, number_visible_input, number_visible_hidden, \
         mse_train, mse_test, last_index, hmcr_par1, hmcr_par2, hmcr_par3, hmcr_par4, label_replace, label_max, label_min \
             in tmp_array:
-        worksheet.write(row, col, row-1)
+        worksheet.write(row, col, row)
         worksheet.write(row, col + 1, learning_rate_rbm)
         worksheet.write(row, col + 2, learning_rate)
         worksheet.write(row, col + 3, number_visible_input)

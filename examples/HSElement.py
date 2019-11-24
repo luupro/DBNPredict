@@ -16,7 +16,7 @@ class HSElement:
     config_ner = 15
     #config_n_iter_back_prop = 1500 #lorenz
     #config_n_iter_back_prop = 1200
-    config_n_iter_back_prop = 100
+    config_n_iter_back_prop = 500 #pci
     config_cdi = 2
     config_bs = 32
     config_af = 'relu'

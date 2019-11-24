@@ -32,14 +32,14 @@ best_lrr = 0
 best_lr = 0
 data_train, label_train, data_test, label_test = None, None, None, None
 
-for i in range(0, 200):
+for i in range(0, 1000):
     print('Run index: %f' % i)
-    #RandomRegression.number_visible_input = randint(1, 10)
-    #RandomRegression.number_hidden_input = randint(1, 10)
-    RandomRegression.number_visible_input = 1
-    RandomRegression.number_visible_input = 3
-    # RandomRegression.tmp_learning_rate_rbm = RandomRegression.tmp_learning_rate_rbm + 0.001
-    RandomRegression.tmp_learning_rate = RandomRegression.tmp_learning_rate + 0.001
+    RandomRegression.number_visible_input = randint(1, 10)
+    RandomRegression.number_hidden_input = randint(1, 10)
+    #RandomRegression.number_visible_input = 1
+    #RandomRegression.number_visible_input = 3
+    #RandomRegression.tmp_learning_rate_rbm = RandomRegression.tmp_learning_rate_rbm + 0.001
+    #RandomRegression.tmp_learning_rate = RandomRegression.tmp_learning_rate + 0.001
     data_train, label_train, data_test, label_test = \
         HSMemory.create_train_and_test_data(lorenz_scale.tolist(), RandomRegression.number_visible_input)
     print("Shape of data_train: " + str(data_train.shape))
