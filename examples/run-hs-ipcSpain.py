@@ -6,9 +6,9 @@ import xlsxwriter
 from sklearn.preprocessing import MinMaxScaler
 
 from dbn.utils import read_file
-from examples.HSElement import HSElement
-from examples.HSMemory import HSMemory
-from examples.TensorGlobal import TensorGlobal
+from HSElement import HSElement
+from HSMemory import HSMemory
+from TensorGlobal import TensorGlobal
 
 
 def transfer_hs_memory_data(tmp_hs_memory):  # print HS
@@ -28,7 +28,9 @@ def transfer_hs_memory_data(tmp_hs_memory):  # print HS
 # --------------------------------------------
 
 
-path = 'chaotic-timeseries/ipcSpain.txt'
+#path = 'chaotic-timeseries/ipcSpain.txt'  # ipc
+path = 'chaotic-timeseries/yearssn.txt'  # vdmt
+
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -42,7 +44,7 @@ cost_function_name = 'mse'
 # element = HSElement()
 hs_memory_object = HSMemory(lorenz_scale.tolist())
 # main_regression = SupervisedDBNRegression()
-NI = 2000  # number of improvisations
+NI = 1000  # number of improvisations
 
 # Improve a new harmony
 for h in range(0, NI):
@@ -189,4 +191,5 @@ def export_result(file_name, tmp_array):
 
 
 # export_result('result_hs_memory', result_data)
-export_result('result_hs_full_', TensorGlobal.followHs)
+#export_result('result_hs_full_', TensorGlobal.followHs)
+export_result('result_hs_full_ipc', TensorGlobal.followHs)

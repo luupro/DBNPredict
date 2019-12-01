@@ -1,9 +1,9 @@
 import random
 import numpy as np
-from .Position import Position
-from examples.HSMemory import HSMemory
+from Particle.Position import Position
+from HSMemory import HSMemory
 import copy
-from examples.TensorGlobal import TensorGlobal
+from TensorGlobal import TensorGlobal
 
 class Space:
 

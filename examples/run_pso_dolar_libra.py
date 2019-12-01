@@ -1,17 +1,17 @@
-from examples.Particle.Particle import Particle
-from examples.Particle.Space import Space
+from Particle.Particle import Particle
+from Particle.Space import Space
 from datetime import datetime
 import numpy as np
 import time
 from dbn.utils import read_file
 from sklearn.preprocessing import MinMaxScaler
 import xlsxwriter
-from examples.TensorGlobal import TensorGlobal
+from TensorGlobal import TensorGlobal
 
 # Read file process start
 start_begin = time.time()
 
-path = 'chaotic-timeseries/ipcSpain.txt'
+path = 'chaotic-timeseries/dolar_libra.txt' 
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -20,7 +20,7 @@ lorenz_scale = minmax.transform(xs.astype('float32'))
 # Read file process end
 
 
-n_iterations = 100
+n_iterations = int(100)
 target_error = 0.000000001
 n_particles = 10
 
@@ -33,8 +33,9 @@ for i in range(0, search_space.n_particles):
 search_space.particles = particles_vector
 search_space.print_particles()
 
-iteration = 0
+iteration = int(0)
 while(iteration < n_iterations):
+    print("iteration " + str(iteration))
     search_space.set_pbest_gbest()
     #search_space.set_gbest()
 
@@ -92,7 +93,8 @@ def export_result(file_name, tmp_array):
 
 
 # export_result('result_hs_memory', result_data)
-export_result('result_pso_', TensorGlobal.followHs)
+
+export_result('result_pso_dolar_libra_', TensorGlobal.followHs)  # vdmt
 
 start_end = time.time()
 print("THE TIME FOR TOTAL: " + str((start_end - start_begin)) + ' second')

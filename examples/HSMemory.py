@@ -1,8 +1,8 @@
-from examples.HSElement import HSElement
+from HSElement import HSElement
 from dbn.tensorflow import SupervisedDBNRegression
 from dbn.utils import series_to_supervised, split_data
 from sklearn.metrics.regression import mean_squared_error
-from examples.TensorGlobal import TensorGlobal
+from TensorGlobal import TensorGlobal
 import tensorflow as tf
 import numpy as np
 
@@ -89,7 +89,7 @@ class HSMemory:
             tmp_input_element.test_mse = 1000
         else:
             tmp_input_element.test_mse = mean_squared_error(label_test, y_pred_test)
-        if np.isnan(tmp_input_element.train_mse):
+        if np.isnan(tmp_input_element.train_mse) or np.isinf(tmp_input_element.train_mse):
             tmp_input_element.train_mse = 1000
 
         # add to export result
@@ -103,21 +103,6 @@ class HSMemory:
         tf.reset_default_graph()
         del tmp_regression
         return tmp_input_element
-
-    @staticmethod
-    def train_data_and_return_model(tmp_input_element, data_train, label_train):
-        tmp_return_element = SupervisedDBNRegression(hidden_layers_structure=tmp_input_element.hidden_layers_structure,
-                                                     learning_rate_rbm=tmp_input_element.learning_rate_rbm,
-                                                     learning_rate=tmp_input_element.learning_rate,
-                                                     n_epochs_rbm=tmp_input_element.n_epochs_rbm,
-                                                     n_iter_backprop=tmp_input_element.n_iter_back_prop,
-                                                     contrastive_divergence_iter=tmp_input_element.contrastive_divergence_iter,
-                                                     batch_size=tmp_input_element.batch_size,
-                                                     activation_function=tmp_input_element.activation_function,
-                                                     n_hidden_layers_mlp=tmp_input_element.n_hidden_layers_mlp,
-                                                     cost_function_name=tmp_input_element.cost_function_name)
-        tmp_return_element.fit(data_train, label_train)  # train data
-        return tmp_return_element
 
     # getting the values
     @staticmethod

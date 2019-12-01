@@ -8,14 +8,13 @@ import tensorflow as tf
 from sklearn.metrics.regression import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 from dbn.utils import read_file
-from examples.RandomRegression import RandomRegression
-from examples.TensorGlobal import TensorGlobal
+from RandomRegression import RandomRegression
+from TensorGlobal import TensorGlobal
 from datetime import datetime
-from examples.HSMemory import HSMemory
+from HSMemory import HSMemory
 
 start_begin = time.time()
-
-path = 'chaotic-timeseries/ipcSpain.txt'
+path = 'chaotic-timeseries/ibm-common.txt'
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -36,10 +35,6 @@ for i in range(0, 1000):
     print('Run index: %f' % i)
     RandomRegression.number_visible_input = randint(1, 10)
     RandomRegression.number_hidden_input = randint(1, 10)
-    #RandomRegression.number_visible_input = 1
-    #RandomRegression.number_visible_input = 3
-    #RandomRegression.tmp_learning_rate_rbm = RandomRegression.tmp_learning_rate_rbm + 0.001
-    #RandomRegression.tmp_learning_rate = RandomRegression.tmp_learning_rate + 0.001
     data_train, label_train, data_test, label_test = \
         HSMemory.create_train_and_test_data(lorenz_scale.tolist(), RandomRegression.number_visible_input)
     print("Shape of data_train: " + str(data_train.shape))
@@ -63,7 +58,7 @@ for i in range(0, 1000):
         tmp_test_mse = 1000
     else:
         tmp_test_mse = mean_squared_error(label_test, Y_pred_test)
-    if np.isnan(tmp_train_mse):
+    if np.isnan(tmp_train_mse) or np.isinf(tmp_train_mse):
         tmp_train_mse = 1000
 
     stop_time = time.time()
@@ -79,7 +74,7 @@ for i in range(0, 1000):
 print("Begin to print result")
 now = datetime.now()
 dt_string = now.strftime("%d%m%Y%H%M%S")
-workbook = xlsxwriter.Workbook('result_' + dt_string + '.xlsx')
+workbook = xlsxwriter.Workbook('result_ibm-common_libra_' + dt_string + '.xlsx')
 worksheet = workbook.add_worksheet()
 row = 1
 col = 0

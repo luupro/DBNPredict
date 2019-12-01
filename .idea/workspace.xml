@@ -5,95 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8724dc9f-4186-4e56-b506-3fa51371cb01" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/chaotic-timeseries/yearssn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/HSElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/HSElement.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/HSMemory.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/HSMemory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Particle/Particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Particle/Particle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Particle/Position.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Particle/Position.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Particle/Space.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Particle/Space.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/RandomRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/RandomRegression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/lorenz_pso.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/lorenz_pso.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/pci-hs.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pci-hs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/pci_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pci_loop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_03112019091711.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_05112019101701.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_06112019190329.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_06112019212058.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_07112019110309.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_07112019171554.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_08112019103330.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_10102019233651.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_10102019235231.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_11112019143554.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_12102019221103.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_16102019031119.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_30102019193147.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_30102019210420.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_30102019222515.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_31102019202421.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_01112019002510.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_05112019010106.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_06112019055730.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_06112019175345.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_06112019223850.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_06112019232608.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_07112019011645.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_07112019092939.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_07112019103331.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_07112019124233.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_07112019140625.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_08102019232711.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_08102019235410.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_08112019004448.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_09102019001731.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_09102019211703.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_10102019223438.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_10112019114747.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_11112019003404.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_11112019202957.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_11112019235116.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_12112019213001.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_12112019213539.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_12112019223417.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_12112019231505.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_13112019202535.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_13112019210502.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_13112019220517.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_16102019114503.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_16112019153235.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_17102019181154.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_18102019185945.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_19102019180642.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_20102019183241.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_21102019184305.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019182509.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019200617.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019203817.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019205438.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019214709.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019220737.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019222915.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_22102019224106.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_23102019202316.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_23102019225428.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_24102019000747.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_24102019002734.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_24102019004127.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_24102019005627.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_24102019235329.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_26102019110124.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_26102019211150.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_27102019000130.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_30102019195723.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_30102019203718.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_30102019204740.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_30102019232234.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019201116.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019205521.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019212356.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019215410.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019221227.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_hs_full_31102019223230.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/lorenz_pso.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/run_pso.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/pci-hs.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/run-hs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/pci_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/run_loop.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/pci_loop.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/run_loop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="97" column="74" lean-forward="true" selection-start-line="96" selection-end-line="97" selection-end-column="74" />
+            <state relative-caret-position="850">
+              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -143,43 +65,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/lorenz_pso.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="97" column="74" selection-start-line="97" selection-start-column="74" selection-end-line="97" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/Particle/Space.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/Particle/Particle.py">
+        <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/ipcSpain.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/Particle/Position.py">
+        <entry file="file://$PROJECT_DIR$/examples/run-hs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -187,34 +82,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/HSMemory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="70" column="74" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="74" />
+            <state relative-caret-position="228">
+              <caret line="91" column="89" lean-forward="true" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="89" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbn/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/RandomRegression.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="83" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="83" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -231,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config_number_visible_input</find>
       <find>.mse</find>
       <find>train_mse</find>
       <find>mse_train</find>
@@ -245,7 +115,6 @@
       <find>mse</find>
       <find>label_replace</find>
       <find>update</find>
-      <find>tmp_train_mse</find>
       <find>1500</find>
       <find>result_data</find>
       <find>keep_index</find>
@@ -261,6 +130,8 @@
       <find>export_result</find>
       <find>earning_rate_rbm</find>
       <find>label_particle</find>
+      <find>train_data_and_return_model</find>
+      <find>tmp_train_mse</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -320,16 +191,19 @@
         <option value="$PROJECT_DIR$/examples/lorenz.py" />
         <option value="$PROJECT_DIR$/examples/lorenz-hs.py" />
         <option value="$PROJECT_DIR$/examples/pci_hs.py" />
-        <option value="$PROJECT_DIR$/examples/pci_loop.py" />
         <option value="$PROJECT_DIR$/examples/TensorGlobal.py" />
-        <option value="$PROJECT_DIR$/examples/RandomRegression.py" />
-        <option value="$PROJECT_DIR$/examples/pci-hs.py" />
-        <option value="$PROJECT_DIR$/examples/HSMemory.py" />
-        <option value="$PROJECT_DIR$/examples/HSElement.py" />
         <option value="$PROJECT_DIR$/examples/Particle/Space.py" />
         <option value="$PROJECT_DIR$/examples/Particle/Particle.py" />
         <option value="$PROJECT_DIR$/examples/Particle/Position.py" />
+        <option value="$PROJECT_DIR$/examples/pci-hs.py" />
         <option value="$PROJECT_DIR$/examples/lorenz_pso.py" />
+        <option value="$PROJECT_DIR$/examples/run_pso.py" />
+        <option value="$PROJECT_DIR$/examples/HSElement.py" />
+        <option value="$PROJECT_DIR$/examples/run-hs.py" />
+        <option value="$PROJECT_DIR$/examples/HSMemory.py" />
+        <option value="$PROJECT_DIR$/examples/pci_loop.py" />
+        <option value="$PROJECT_DIR$/examples/RandomRegression.py" />
+        <option value="$PROJECT_DIR$/examples/run_loop.py" />
       </list>
     </option>
   </component>
@@ -349,53 +223,12 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-              <item name="dbn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="chaotic-timeseries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="Particle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deep-belief-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deep-belief-network" type="462c0819:PsiDirectoryNode" />
-              <item name="saved_model" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574572802142" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575096143937" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/examples/Image/myplotInit.png" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -404,18 +237,18 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\ID\deep-belief-network\examples\chaotic-timeseries" />
+      <recent name="E:\Project\ID\deep-belief-network\examples" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/examples/timeseries" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Project\ID\deep-belief-network\examples\Particle" />
       <recent name="E:\Project\ID\deep-belief-network\examples" />
       <recent name="$PROJECT_DIR$/examples/timeseries" />
       <recent name="$PROJECT_DIR$/examples" />
       <recent name="$PROJECT_DIR$/examples/chaotic-timeseries" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Project\ID\deep-belief-network\examples" />
-      <recent name="E:\Project\ID\deep-belief-network\examples\chaotic-timeseries" />
-      <recent name="$PROJECT_DIR$/examples" />
-      <recent name="$PROJECT_DIR$/examples/timeseries" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -430,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lorenz_pso">
+  <component name="RunManager" selected="Python.run_loop">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="deep-belief-network-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -453,72 +286,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lorenz-hs" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep-belief-network-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/lorenz-hs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lorenz" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep-belief-network-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/lorenz.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lorenz_pso" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep-belief-network-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/lorenz_pso.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="pci-hs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep-belief-network-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -532,7 +299,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/pci-hs.py" />
+      <option name="SCRIPT_NAME" value="E:\Project\ID\deep-belief-network\examples\run-hs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -554,7 +321,67 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/pci_loop.py" />
+      <option name="SCRIPT_NAME" value="E:\Project\ID\deep-belief-network\examples\run_loop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run-hs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep-belief-network-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/run-hs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_loop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep-belief-network-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/run_loop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_pso" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep-belief-network-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/run_pso.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -565,11 +392,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lorenz_pso" />
+        <item itemvalue="Python.run_loop" />
+        <item itemvalue="Python.run-hs" />
+        <item itemvalue="Python.run_pso" />
         <item itemvalue="Python.pci_loop" />
         <item itemvalue="Python.pci-hs" />
-        <item itemvalue="Python.lorenz-hs" />
-        <item itemvalue="Python.lorenz" />
       </list>
     </recent_temporary>
   </component>
@@ -663,12 +490,15 @@
       <workItem from="1574483663261" duration="5175000" />
       <workItem from="1574519994209" duration="1045000" />
       <workItem from="1574563415471" duration="3264000" />
-      <workItem from="1574572534079" duration="227000" />
+      <workItem from="1574572534079" duration="3507000" />
+      <workItem from="1574591954639" duration="5856000" />
+      <workItem from="1574778156605" duration="14962000" />
+      <workItem from="1574929834626" duration="20695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="640102000" />
+    <option name="totallyTimeSpent" value="684895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -681,7 +511,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" weight="0.22181553" />
       <window_info id="Structure" order="1" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
@@ -692,13 +521,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49487555" weight="0.36849925" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8477306" weight="0.31203565" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84626645" weight="0.31203565" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.64934117" weight="0.39375928" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.1522694" side_tool="true" visible="true" weight="0.31203565" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.15373352" side_tool="true" weight="0.31203565" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.25505444" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -719,7 +548,7 @@
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.22181553" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992224" visible="true" weight="0.22181553" />
       <window_info id="Structure" order="1" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Favorites" order="2" sideWeight="0.5007776" side_tool="true" weight="0.22134387" />
       <window_info id="Designer" order="3" />
@@ -728,13 +557,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49487555" weight="0.36849925" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84992677" weight="0.31203565" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.64934117" visible="true" weight="0.39375928" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84626645" visible="true" weight="0.31203565" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.64934117" weight="0.39375928" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.1500732" side_tool="true" weight="0.31203565" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.15373352" side_tool="true" weight="0.31203565" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.25505444" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -804,16 +633,6 @@
           <line>66</line>
           <option name="timeStamp" value="200" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/examples/lorenz_pso.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="219" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/examples/HSMemory.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="221" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -856,13 +675,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow_core/python/framework/constant_op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="264" selection-start-line="264" selection-end-line="264" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydev_ipython/matplotlibtools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -979,14 +791,8 @@
         <state relative-caret-position="-16825" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6454" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz3.txt" />
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/Lorenz2.txt" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/metrics/regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1004,31 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_bundle/pydev_umd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow_core/python/framework/op_def_library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/xlsxwriter/worksheet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1043,9 +828,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/lorenz-hs.py" />
-    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/ipcSpain.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -1122,72 +904,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/HSElement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pci-hs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="169" column="39" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbn/tensorflow/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="490" column="6" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/HSMemory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="70" column="74" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbn/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/RandomRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/Particle/Position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1202,25 +924,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/Particle/Particle.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pci_loop.py">
+    <entry file="file://$PROJECT_DIR$/dbn/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="97" column="74" lean-forward="true" selection-start-line="96" selection-end-line="97" selection-end-column="74" />
+        <state relative-caret-position="1530">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/lorenz_pso.py">
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/yearssn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/run_pso.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Particle/Particle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Particle/Position.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_bundle/pydev_umd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/HSElement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/RandomRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="97" lean-forward="true" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/xlsxwriter/worksheet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
-          <caret line="97" column="74" selection-start-line="97" selection-start-column="74" selection-end-line="97" selection-end-column="74" />
+          <caret line="564" selection-start-line="564" selection-end-line="564" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/HSMemory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="91" column="89" lean-forward="true" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="89" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/run-hs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/chaotic-timeseries/ipcSpain.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/run_loop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1270,7 +1081,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32413793" />
+                <option value="0.19310345" />
               </list>
             </option>
           </splitter-proportions>

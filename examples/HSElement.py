@@ -1,19 +1,19 @@
 from random import *
-from examples.TensorGlobal import TensorGlobal
+from TensorGlobal import TensorGlobal
 
 class HSElement:
     #  standard values
-    config_lrr_lb = 0.001
-    config_lrr_ub = 0.1
+    config_lrr_lb = 0.0001
+    config_lrr_ub = 0.95
     config_lrr_range_min = 0.00001
     config_lrr_range_max = 0.0001
-    config_lr_lb = 0.005
-    config_lr_ub = 0.05
+    config_lr_lb = 0.0001
+    config_lr_ub = 0.95
     config_lr_range_min = 0.00001
     config_lr_range_max = 0.0001
     #config_ner = 100 #lorenz
     #config_ner = 150
-    config_ner = 15
+    config_ner = 20
     #config_n_iter_back_prop = 1500 #lorenz
     #config_n_iter_back_prop = 1200
     config_n_iter_back_prop = 500 #pci
@@ -38,7 +38,7 @@ class HSElement:
             else:
                 TensorGlobal.global_range_lr_rmb += 1
 
-        if uniform(0, 1) < 0.5:
+        if uniform(0, 1) < 0.9:
             self.learning_rate = self.config_lr_lb + uniform(0, 1) * (self.config_lr_ub - self.config_lr_lb)
         else:
             self.learning_rate = self.config_lr_lb + (self.config_lr_ub/100)*TensorGlobal.global_range_lr

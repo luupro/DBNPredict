@@ -1,6 +1,6 @@
 #  import numpy as np
 #  import random
-from .Position import Position
+from Particle.Position import Position
 
 
 class Particle():

@@ -1,5 +1,5 @@
 import numpy as np
-import cupy as cp
+#import cupy as cp
 import pandas as pd
 
 def batch_generator(batch_size, data, labels=None):
@@ -9,7 +9,7 @@ def batch_generator(batch_size, data, labels=None):
     :param labels: array-like, shape = (n_samples, )
     :return:
     """
-    n_batches = int(cp.ceil(len(data) / float(batch_size)))
+    n_batches = int(np.ceil(len(data) / float(batch_size)))
     idx = np.random.permutation(len(data))
     data_shuffled = data[idx]
     if labels is not None:
@@ -30,7 +30,7 @@ def to_categorical(labels, num_classes):
     :param labels: array-like, shape = (n_samples, )
     :return:
     """
-    new_labels = cp.zeros([len(labels), num_classes])
+    new_labels = np.zeros([len(labels), num_classes])
     label_to_idx_map, idx_to_label_map = dict(), dict()
     idx = 0
     for i, label in enumerate(labels):
@@ -96,8 +96,8 @@ def split_data(data_input, data_labels, test_split=0.2):
 
 
 def mean_absolute_percentage_error(y_true, y_pred):
-    y_true, y_pred = cp.array(y_true), cp.array(y_pred)
-    return np.mean(cp.abs((y_true - y_pred) / y_true)) * 100
+    y_true, y_pred = np.array(y_true), np.array(y_pred)
+    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
 
 
 def create_list_cols(n):
