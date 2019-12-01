@@ -7,8 +7,8 @@ class Position:
     config_lrr_min = 0.0001
     config_lr_max = 0.95
     config_lr_min = 0.0001
-    config_ner = 20 #pci
-    config_n_iter_back_prop = 500  #pci
+    config_ner = 50 #pci
+    config_n_iter_back_prop = 2500  #pci
     config_cdi = 2
     config_bs = 32
     config_af = 'relu'

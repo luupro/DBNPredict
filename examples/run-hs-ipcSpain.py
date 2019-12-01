@@ -28,8 +28,7 @@ def transfer_hs_memory_data(tmp_hs_memory):  # print HS
 # --------------------------------------------
 
 
-#path = 'chaotic-timeseries/ipcSpain.txt'  # ipc
-path = 'chaotic-timeseries/yearssn.txt'  # vdmt
+path = 'chaotic-timeseries/ipcSpain.txt'  # ipc
 
 xs = np.array(read_file(path))
 
@@ -189,7 +188,5 @@ def export_result(file_name, tmp_array):
         row += 1
     workbook.close()
 
-
 # export_result('result_hs_memory', result_data)
-#export_result('result_hs_full_', TensorGlobal.followHs)
 export_result('result_hs_full_ipc', TensorGlobal.followHs)
