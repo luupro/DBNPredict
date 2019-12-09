@@ -8,13 +8,13 @@ import tensorflow as tf
 from sklearn.metrics.regression import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 from dbn.utils import read_file
-from RandomRegression import RandomRegression
+from RandomRegressionIbm import RandomRegressionIbm
 from TensorGlobal import TensorGlobal
 from datetime import datetime
 from HSMemory import HSMemory
 
 start_begin = time.time()
-path = 'chaotic-timeseries/yearssn.txt'
+path = 'chaotic-timeseries/ibm-common.txt'
 xs = np.array(read_file(path))
 
 xs = xs.reshape(-1, 1)
@@ -31,19 +31,19 @@ best_lrr = 0
 best_lr = 0
 data_train, label_train, data_test, label_test = None, None, None, None
 
-for i in range(0, 10):
+for i in range(0, 2000):
     print('Run index: %f' % i)
-    RandomRegression.number_visible_input = randint(1, 10)
-    RandomRegression.number_hidden_input = randint(1, 10)
+    RandomRegressionIbm.number_visible_input = randint(1, 10)
+    RandomRegressionIbm.number_hidden_input = randint(1, 10)
     data_train, label_train, data_test, label_test = \
-        HSMemory.create_train_and_test_data(lorenz_scale.tolist(), RandomRegression.number_visible_input)
+        HSMemory.create_train_and_test_data(lorenz_scale.tolist(), RandomRegressionIbm.number_visible_input)
     print("Shape of data_train: " + str(data_train.shape))
     print("shape of label_train: " + str(label_train.shape))
 
     start_time = time.time()
-    regressor, tmp_lrr, tmp_lr = RandomRegression.create_random_model()
+    regressor, tmp_lrr, tmp_lr = RandomRegressionIbm.create_random_model()
     regressor.fit(data_train, label_train)
-    tmp_train_mse = sum(regressor.train_loss) / RandomRegression.number_iter_backprop
+    tmp_train_mse = sum(regressor.train_loss) / RandomRegressionIbm.number_iter_backprop
     tmp_min_mse_label = 'MORE BAD'
     stop_time = time.time()
     print("THE TIME FOR TRAINING: " + str((stop_time - start_time)) + ' second')
@@ -66,7 +66,7 @@ for i in range(0, 10):
     TensorGlobal.sessFlg = True
     tf.reset_default_graph()
     del regressor
-    tmp_element_data = [tmp_lrr, tmp_lr, RandomRegression.number_visible_input, RandomRegression.number_hidden_input,
+    tmp_element_data = [tmp_lrr, tmp_lr, RandomRegressionIbm.number_visible_input, RandomRegressionIbm.number_hidden_input,
                         tmp_train_mse, tmp_test_mse]
     result_data.append(tmp_element_data)
 
@@ -74,7 +74,7 @@ for i in range(0, 10):
 print("Begin to print result")
 now = datetime.now()
 dt_string = now.strftime("%d%m%Y%H%M%S")
-workbook = xlsxwriter.Workbook('result_yearssn_' + dt_string + '.xlsx')
+workbook = xlsxwriter.Workbook('result_ibm-common_libra_' + dt_string + '.xlsx')
 worksheet = workbook.add_worksheet()
 row = 1
 col = 0

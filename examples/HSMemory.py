@@ -14,8 +14,10 @@ def get_worst_element():
 class HSMemory:
     number_decision_var = 4  # need review this
     hmMemory = []
-    HMCR = [0.8, 0.8, 0.8, 0.8]  # for each element
-    PAR = [0.4, 0.4, 0.4, 0.4]  # for each element
+    #HMCR = [0.8, 0.8, 0.8, 0.8]  # for each element
+    HMCR = 0.8
+    PAR = 0.5
+    #PAR = [0.4, 0.4, 0.4, 0.4]  # for each element
     max_mse = 0
     min_mse = 1000
     max_index = 0  # index for worst element

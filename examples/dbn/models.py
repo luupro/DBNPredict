@@ -61,7 +61,9 @@ class BinaryRBM(BaseEstimator, TransformerMixin, BaseModel):
             self.b = np.random.randn(self.n_visible_units) / np.sqrt(self.n_visible_units)
             self._activation_function_class = SigmoidActivationFunction
         elif self.activation_function == 'relu':
-            self.W = truncnorm.rvs(-0.2, 0.2, size=[self.n_hidden_units, self.n_visible_units]) / np.sqrt(
+            #self.W = truncnorm.rvs(-0.2, 0.2, size=[self.n_hidden_units, self.n_visible_units]) / np.sqrt(
+                #self.n_visible_units)
+            self.W = truncnorm.rvs(0, 0, size=[self.n_hidden_units, self.n_visible_units]) / np.sqrt(
                 self.n_visible_units)
             self.c = np.full(self.n_hidden_units, 0.1) / np.sqrt(self.n_visible_units)
             self.b = np.full(self.n_visible_units, 0.1) / np.sqrt(self.n_visible_units)

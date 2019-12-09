@@ -3,20 +3,16 @@ from TensorGlobal import TensorGlobal
 
 class HSElement:
     #  standard values
-    config_lrr_lb = 0.0001
-    config_lrr_ub = 0.95
-    config_lrr_range_min = 0.00001
-    config_lrr_range_max = 0.0001
-    config_lr_lb = 0.0001
-    config_lr_ub = 0.95
-    config_lr_range_min = 0.00001
-    config_lr_range_max = 0.0001
-    #config_ner = 100 #lorenz
-    #config_ner = 150
-    config_ner = 20
-    #config_n_iter_back_prop = 1500 #lorenz
-    #config_n_iter_back_prop = 1200
-    config_n_iter_back_prop = 500 #pci
+    config_lrr_lb = 0.001
+    config_lrr_ub = 0.1
+    config_lrr_range_min = 0.0001
+    config_lrr_range_max = 0.001
+    config_lr_lb = 0.003
+    config_lr_ub = 0.03
+    config_lr_range_min = 0.0001
+    config_lr_range_max = 0.001
+    config_ner = 10
+    config_n_iter_back_prop = 200 #pci
     config_cdi = 2
     config_bs = 32
     config_af = 'relu'
@@ -26,28 +22,9 @@ class HSElement:
     def __init__(self):
         self.number_visible_input = randint(1, 10)
         self.number_hidden_input = randint(1, 10)
-        
         # retrieve through value in the range
-        if uniform(0, 1) < 0.9:
-            self.learning_rate_rbm = self.config_lrr_lb + uniform(0, 1) * (self.config_lrr_ub - self.config_lrr_lb)
-        else:
-            self.learning_rate_rbm = self.config_lrr_lb + (self.config_lrr_ub/100)*TensorGlobal.global_range_lr_rmb
-            + randint(-1, 1) * self.config_lrr_range_min
-            if TensorGlobal.global_range_lr_rmb == 100:
-                TensorGlobal.global_range_lr_rmb = 0
-            else:
-                TensorGlobal.global_range_lr_rmb += 1
-
-        if uniform(0, 1) < 0.9:
-            self.learning_rate = self.config_lr_lb + uniform(0, 1) * (self.config_lr_ub - self.config_lr_lb)
-        else:
-            self.learning_rate = self.config_lr_lb + (self.config_lr_ub/100)*TensorGlobal.global_range_lr
-            + randint(-1, 1) * self.config_lr_range_min
-            if TensorGlobal.global_range_lr == 100:
-                TensorGlobal.global_range_lr = 0
-            else:
-                TensorGlobal.global_range_lr += 1
-
+        self.learning_rate_rbm = self.config_lrr_lb + uniform(0, 1) * (self.config_lrr_ub - self.config_lrr_lb)
+        self.learning_rate = self.config_lr_lb + uniform(0, 1) * (self.config_lr_ub - self.config_lr_lb)
         self.n_epochs_rbm = self.config_ner
         self.n_iter_back_prop = self.config_n_iter_back_prop
         self.contrastive_divergence_iter = self.config_cdi
